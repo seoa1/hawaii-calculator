@@ -15,13 +15,13 @@ export default class Calculator extends Component {
                <input type='button' value='remove' onClick={this.removeClick.bind(this, i)}/><br/>
                <label>Andrew</label>
                <input type="checkbox" defaultChecked="true" key={i*10+1} onChange={this.toggleCheckbox.bind(this, i, 0)}/>
-               <label>Jeffrey</label>
+               <label> -------- Jeffrey</label>
                <input type="checkbox" defaultChecked="true" key={i*10+2} onChange={this.toggleCheckbox.bind(this, i, 1)}/>
-               <label>Adit</label>
+               <label> -------- Adit</label>
                <input type="checkbox" defaultChecked="true" key={i*10+3} onChange={this.toggleCheckbox.bind(this, i, 2)}/>
-               <label>Nicole</label>
+               <label> -------- Nicole</label>
                <input type="checkbox" defaultChecked="true" key={i*10+4} onChange={this.toggleCheckbox.bind(this, i, 3)}/>
-               <label>Vanessa</label>
+               <label> -------- Vanessa</label>
                <input type="checkbox" defaultChecked="true" key={i*10+5} onChange={this.toggleCheckbox.bind(this, i, 4)}/>
             </div>          
         )
@@ -53,11 +53,27 @@ export default class Calculator extends Component {
      }
      
      handleSubmit(event) {
-       for (let i=0; i < this.state.values.length(); i++) {
-            
+        event.preventDefault();
+         let totals = [0,0,0,0,0];
+       for (let i=0; i < this.state.values.length; i++) {
+           let num = 0;
+            for (let j=0; j < 5; j++) {
+                if (this.state.owners[i][j]) {
+                    num++;
+                }
+            }
+            let split = this.state.values[i] / num;
+            for (let j=0; j<5; j++) {
+                if (this.state.owners[i][j]) {
+                    totals[j] += split;
+                }
+            }
        }
-       alert('A name was submitted: ' + this.state.values.join(', '));
-       event.preventDefault();
+       let all = 0;
+       for (let i=0; i<5; i++) {
+           all += totals[i];
+       }
+       alert(`Amount owed:\nAndrew: ${totals[0].toFixed(2)}\nJeffrey: ${totals[1].toFixed(2)}\nAdit: ${totals[2].toFixed(2)}\nNicole: ${totals[3].toFixed(2)}\nVanessa: ${totals[4].toFixed(2)}\n\nTotal: ${all.toFixed(2)}`);
      }
    
      render() {
