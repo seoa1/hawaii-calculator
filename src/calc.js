@@ -4,7 +4,6 @@ export default class Calculator extends Component {
     constructor(props) {
         super(props);
         this.state = {values:[], owners:[]};
-        this.names = ['Andrew', 'Adit', 'Jeffrey', 'Nicole', 'Vanessa'];
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
