@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hawaii-calculator/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/hawaii-calculator/static/js/main.dab7641b.chunk.js",
+    "main.js.map": "/hawaii-calculator/static/js/main.dab7641b.chunk.js.map",
+    "runtime-main.js": "/hawaii-calculator/static/js/runtime-main.7a599677.js",
+    "runtime-main.js.map": "/hawaii-calculator/static/js/runtime-main.7a599677.js.map",
+    "static/js/2.b9769fad.chunk.js": "/hawaii-calculator/static/js/2.b9769fad.chunk.js",
+    "static/js/2.b9769fad.chunk.js.map": "/hawaii-calculator/static/js/2.b9769fad.chunk.js.map",
+    "static/js/3.26561c9e.chunk.js": "/hawaii-calculator/static/js/3.26561c9e.chunk.js",
+    "static/js/3.26561c9e.chunk.js.map": "/hawaii-calculator/static/js/3.26561c9e.chunk.js.map",
+    "index.html": "/hawaii-calculator/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/hawaii-calculator/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.b9769fad.chunk.js.LICENSE.txt": "/hawaii-calculator/static/js/2.b9769fad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a599677.js",
+    "static/js/2.b9769fad.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.dab7641b.chunk.js"
+  ]
+}
